@@ -3,7 +3,7 @@
 ### Setup before running the tests
 1. Clone the project
 2. Make sure you have the following installed :
-- `jdk1.8.0_191` installed and env variable added
+- `jdk` installed and env variable added
 - `nodejs` installed and npm env variable added
 
 3. Run `npm install` in the root directory
