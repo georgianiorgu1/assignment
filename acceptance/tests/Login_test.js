@@ -3,8 +3,6 @@ let soleUser;
 let password;
 let errorMsg;
 let emptyString, numericValue, specialChars, nonAscii;
-let firstName, lastName, date, email;
-let editFirstName, editLastName, editDate, editEmail;
 
 
 
