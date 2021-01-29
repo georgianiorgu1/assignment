@@ -1,0 +1,65 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1611912763366' stop='1611912786040'>
+    <name>EmployeeOperations:</name>
+    <title>EmployeeOperations:</title>
+    <test-cases>
+        <test-case start='1611912763378' status='failed' stop='1611912785495'>
+            <name>test create edit and remove employee functionality</name>
+            <title>test create edit and remove employee functionality</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1611912764611' status='failed' stop='1611912785495'>
+                    <name>I: loginAs "Luke", "Skywalker"</name>
+                    <title>I: loginAs "Luke", "Skywalker"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1611912764612' status='passed' stop='1611912765385'>
+                            <name>I am on page "/"</name>
+                            <title>I am on page "/"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1611912765385' status='passed' stop='1611912765490'>
+                            <name>I resize window "fullscreen", "fullscreen"</name>
+                            <title>I resize window "fullscreen", "fullscreen"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1611912765491' status='failed' stop='1611912785494'>
+                            <name>I wait for visible "//p[contains(.,'Username: "Luke" Password: "Skywalker"')]", 20</name>
+                            <title>I wait for visible "//p[contains(.,'Username: "Luke" Password: "Skywalker"')]", 20</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='ba3f1b96-9a49-4f66-aed8-94fe35508b85-attachment.png' type='image/png' size='86286'/>
+            </attachments>
+            <failure>
+                <message>Wait timed out after 20002ms</message>
+                <stack-trace>TimeoutError: Wait timed out after 20002ms
+                    at /Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:2201:17
+                    at ManagedPromise.invokeCallback_ (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:1376:14)
+                    at TaskQueue.execute_ (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:3084:14)
+                    at TaskQueue.executeNext_ (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:3067:27)
+                    at /Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:2927:27
+                    at /Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:668:7
+                    at runMicrotasks (&lt;anonymous>)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+                From: Task: &lt;anonymous wait>
+                    at scheduleWait (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:2188:20)
+                    at ControlFlow.wait (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:2517:12)
+                    at thenableWebDriverProxy.wait (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/webdriver.js:934:29)
+                    at run (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/protractor/built/browser.js:59:33)
+                    at ProtractorBrowser.to.&lt;computed> [as wait] (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/protractor/built/browser.js:67:16)
+                    at Protractor.waitForVisible (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/codeceptjs/lib/helper/Protractor.js:1397:25)
+                    at Step.run (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/codeceptjs/lib/step.js:66:47)
+                    at /Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/codeceptjs/lib/actor.js:117:23
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

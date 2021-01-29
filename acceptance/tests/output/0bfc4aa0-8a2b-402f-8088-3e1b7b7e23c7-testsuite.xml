@@ -1,0 +1,140 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1611912862407' stop='1611912892234'>
+    <name>Login:</name>
+    <title>Login:</title>
+    <test-cases>
+        <test-case start='1611912862409' status='failed' stop='1611912869674'>
+            <name>test login positiveCase</name>
+            <title>test login positiveCase</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1611912863457' status='failed' stop='1611912869673'>
+                    <name>I: loginAs "Luke", "Skywalker"</name>
+                    <title>I: loginAs "Luke", "Skywalker"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1611912863457' status='passed' stop='1611912864072'>
+                            <name>I am on page "/"</name>
+                            <title>I am on page "/"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1611912864072' status='passed' stop='1611912864181'>
+                            <name>I resize window "fullscreen", "fullscreen"</name>
+                            <title>I resize window "fullscreen", "fullscreen"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1611912864181' status='failed' stop='1611912869673'>
+                            <name>I wait for visible "//p[contains(.,'Username: "Luke" Password: "Skywalker"')]", 20</name>
+                            <title>I wait for visible "//p[contains(.,'Username: "Luke" Password: "Skywalker"')]", 20</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>no such window: window was already closed
+                  (Session info: chrome=88.0.4324.96)
+                Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+                System info: host: 'Georgians-MacBook-Pro.local', ip: '2a02:2f04:c207:f272:713c:cc07:9c1c:4996%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.2'
+                Driver info: driver.version: unknown</message>
+                <stack-trace>NoSuchWindowError: no such window: window was already closed
+                  (Session info: chrome=88.0.4324.96)
+                Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+                System info: host: 'Georgians-MacBook-Pro.local', ip: '2a02:2f04:c207:f272:713c:cc07:9c1c:4996%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.2'
+                Driver info: driver.version: unknown
+                    at Object.checkLegacyResponse (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/error.js:546:15)
+                    at parseHttpResponse (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/http.js:509:13)
+                    at /Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/http.js:441:30
+                    at runMicrotasks (&lt;anonymous>)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+                From: Task: WebDriver.findElements(By(xpath, //p[contains(.,'Username: "Luke" Password: "Skywalker"')]))
+                    at thenableWebDriverProxy.schedule (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/webdriver.js:807:17)
+                    at thenableWebDriverProxy.findElements (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/webdriver.js:1048:19)
+                    at /Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/protractor/built/element.js:159:44
+                    at ManagedPromise.invokeCallback_ (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:1376:14)
+                    at TaskQueue.execute_ (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:3084:14)
+                    at TaskQueue.executeNext_ (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:3067:27)
+                    at /Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:2927:27
+                    at /Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:668:7
+                From: Task: &lt;anonymous>
+                    at Timeout.pollCondition [as _onTimeout] (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:2195:19)
+                    at listOnTimeout (internal/timers.js:554:17)
+                    at processTimers (internal/timers.js:497:7)
+                From: Task: &lt;anonymous wait>
+                    at scheduleWait (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:2188:20)
+                    at ControlFlow.wait (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:2517:12)
+                    at thenableWebDriverProxy.wait (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/webdriver.js:934:29)
+                    at run (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/protractor/built/browser.js:59:33)
+                    at ProtractorBrowser.to.&lt;computed> [as wait] (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/protractor/built/browser.js:67:16)
+                    at Protractor.waitForVisible (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/codeceptjs/lib/helper/Protractor.js:1397:25)
+                    at Step.run (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/codeceptjs/lib/step.js:66:47)
+                    at /Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/codeceptjs/lib/actor.js:117:23
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1611912869782' status='failed' stop='1611912891665'>
+            <name>test login negative cases</name>
+            <title>test login negative cases</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1611912870754' status='failed' stop='1611912891665'>
+                    <name>I: loginAs "$%$#%$#%#", "Skywalker"</name>
+                    <title>I: loginAs "$%$#%$#%#", "Skywalker"</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1611912870754' status='passed' stop='1611912871557'>
+                            <name>I am on page "/"</name>
+                            <title>I am on page "/"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1611912871558' status='passed' stop='1611912871664'>
+                            <name>I resize window "fullscreen", "fullscreen"</name>
+                            <title>I resize window "fullscreen", "fullscreen"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1611912871664' status='failed' stop='1611912891664'>
+                            <name>I wait for visible "//p[contains(.,'Username: "Luke" Password: "Skywalker"')]", 20</name>
+                            <title>I wait for visible "//p[contains(.,'Username: "Luke" Password: "Skywalker"')]", 20</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='064c9ab7-7e2c-4069-abba-1cf6aa6c0540-attachment.png' type='image/png' size='86286'/>
+            </attachments>
+            <failure>
+                <message>Wait timed out after 20000ms</message>
+                <stack-trace>TimeoutError: Wait timed out after 20000ms
+                    at /Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:2201:17
+                    at ManagedPromise.invokeCallback_ (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:1376:14)
+                    at TaskQueue.execute_ (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:3084:14)
+                    at TaskQueue.executeNext_ (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:3067:27)
+                    at /Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:2927:27
+                    at /Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:668:7
+                    at runMicrotasks (&lt;anonymous>)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+                From: Task: &lt;anonymous wait>
+                    at scheduleWait (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:2188:20)
+                    at ControlFlow.wait (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/promise.js:2517:12)
+                    at thenableWebDriverProxy.wait (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/selenium-webdriver/lib/webdriver.js:934:29)
+                    at run (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/protractor/built/browser.js:59:33)
+                    at ProtractorBrowser.to.&lt;computed> [as wait] (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/protractor/built/browser.js:67:16)
+                    at Protractor.waitForVisible (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/codeceptjs/lib/helper/Protractor.js:1397:25)
+                    at Step.run (/Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/codeceptjs/lib/step.js:66:47)
+                    at /Users/georgianiorgu/Workspace/ZivverAssignment/node_modules/codeceptjs/lib/actor.js:117:23
+                    at runMicrotasks (&lt;anonymous>)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
