@@ -10,12 +10,12 @@ let editFirstName, editLastName, editDate, editEmail;
 BeforeSuite(async ({I}) => {
     soleUser = "Luke";
     password = "Skywalker";
-    firstName = await I.generateUniqid() + "Testing";
-    lastName = await I.generateUniqid() + "Testerson";
+    firstName = I.generateUniqid() + "Testing";
+    lastName = I.generateUniqid() + "Testerson";
     date = "2021-12-11";
-    email = "test" + await I.generateUniqid() + "@example.com";
-    editFirstName = await I.generateUniqid() + "gelu";
-    editLastName = await I.generateUniqid() + "gelu";
+    email = "test" + I.generateUniqid() + "@example.com";
+    editFirstName = I.generateUniqid() + "tester";
+    editLastName = I.generateUniqid() + "testsAlot";
     editDate = "2021-12-22";
     editEmail = "test" + I.generateUniqid() + "@example.com";
 });
@@ -32,7 +32,7 @@ Scenario('test create edit and remove employee functionality', ({ I, employeeLis
 
     employeeListPage.createNewEmployee();
     employeeListPage.fillEmployeeInfo(firstName, lastName, date, email);
-    employeeListPage.validateAddOrEditedEmployee(editFirstName, editLastName);
+    employeeListPage.validateAddOrEditedEmployee(firstName, lastName);
 
     employeeListPage.editEmployeeInfo(firstName, lastName, editFirstName, editLastName, editDate, editEmail);
     employeeListPage.validateAddOrEditedEmployee(editFirstName, editLastName);

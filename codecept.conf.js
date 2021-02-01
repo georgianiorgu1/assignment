@@ -15,15 +15,11 @@ exports.config = {
       rootElement: 'body',
       angular: false
     },
-    Common: {
-      require: './acceptance/tests/utils/utils.js',
-    }
   },
   include: {
     I: './acceptance/tests/steps_file.js',
     employeeListPage: './acceptance/tests/pages/EmployeeList.js',
     loginPage: './acceptance/tests/pages/Login.js',
-    commonStep: './acceptance/tests/steps/common.js',
   },
   bootstrap: null,
   mocha: {},

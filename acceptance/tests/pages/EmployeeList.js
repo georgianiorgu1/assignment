@@ -10,16 +10,16 @@ module.exports = {
         firstEntryInTable: 'ul#employee-list > li:first-child',
         allRows: 'ul#employee-list > li',
         firstName: 'fieldset > label:nth-child(3) > input',
-        lastName: ' fieldset > label:nth-child(4) > input',
-        startDate: ' fieldset > label:nth-child(5) > input',
-        email: ' fieldset > label:nth-child(6) > input',
+        lastName: 'fieldset > label:nth-child(4) > input',
+        startDate: 'fieldset > label:nth-child(5) > input',
+        email: 'fieldset > label:nth-child(6) > input',
         listEntry:'//li[contains(.,"%s")]',
         inputClassName: 'ng-pristine ng-invalid ng-invalid-required'
     },
     createNewEmployee: function () {
         I.waitForVisible("ul#employee-list", 20)
         I.click(this.elements.createBtn);
-        I.waitInUrl("/add/")
+        I.waitInUrl("employees/new")
         I.waitForVisible(this.elements.firstName, 10);
     },
 
@@ -61,12 +61,14 @@ module.exports = {
         I.seeElement(this.elements.listEntry.replace("%s", firstName + " " + lastName));
         I.click(this.elements.listEntry.replace("%s", firstName + " " + lastName));
         I.click(this.elements.deleteBtn);
+        I.acceptPopup();
     },
 
     validateEmployeeRemoval(firstName, lastName){
-        I.waitForVisible(this.elements.firstEntryInTable, 30);
+
+        I.moveCursorTo(this.elements.listEntry.replace("%s", firstName + " " + lastName));
+        I.waitForInvisible(this.elements.listEntry.replace("%s", firstName + " " + lastName), 30);
         I.dontSeeElement(this.elements.listEntry.replace("%s", firstName + " " + lastName));
-        I.dontSeeElementInDOM(this.elements.listEntry.replace("%s", firstName + " " + lastName));
 
     }
 
