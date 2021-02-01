@@ -65,8 +65,8 @@ module.exports = {
     },
 
     validateEmployeeRemoval(firstName, lastName){
-
-        I.moveCursorTo(this.elements.listEntry.replace("%s", firstName + " " + lastName));
+        //This action is necessary so the employee list would be updated after removal
+        I.doubleClick(this.elements.listEntry.replace("%s", firstName + " " + lastName));
         I.waitForInvisible(this.elements.listEntry.replace("%s", firstName + " " + lastName), 30);
         I.dontSeeElement(this.elements.listEntry.replace("%s", firstName + " " + lastName));
 
